@@ -7,8 +7,7 @@ from __future__ import print_function
 import requests
 import json
 
-LOCAL_DEBUG = False                      # Print local debug info or not
-API_BASE_URL = 'api/rest/v5/'
+LOCAL_DEBUG = True                      # Print local debug info or not
 
 
 # The SigningHubAPI class offers access to the Adobe Sign REST API version 5
@@ -23,7 +22,7 @@ class SigningHubAPI(object):
         self.username = username
         self.password = password
         self.scope = scope
-        self.base_url = 'https://api.signinghub.com/v3/'
+        self.base_url = 'https://staging-sh.bcc-ca.gov.bd:92/v4/'
         self.last_function_name = None
         self.last_error_message = None
         pass
@@ -48,7 +47,7 @@ class SigningHubAPI(object):
             }
 
             # Call the SigningHub API
-            url = 'https://api.signinghub.com/authenticate'
+            url = 'https://staging-sh.bcc-ca.gov.bd:92/authenticate'
             response = requests.post(url, headers=headers, data=payload)
 
             # Process the response

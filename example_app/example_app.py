@@ -87,7 +87,7 @@ def show_iframe():
     if not access_token: return redirect('/')
 
     # Create a package
-    package_name = '2017 Contract - '+recipient_user_name+' - '+recipient_user_email
+    package_name = '2024 Contract - '+recipient_user_name+' - '+recipient_user_email
     package_id = signinghub_api.add_package(access_token, package_name)
 
     # Add a document from the document library
