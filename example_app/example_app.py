@@ -121,6 +121,9 @@ def show_iframe():
             if success:
                 success = signinghub_api.share_document(access_token, package_id)
 
+            if success:
+                success, iframe_text = signinghub_api.get_iframe_url(access_token, package_id)
+
     # Show error message if needed
     if signinghub_api.last_error_message:
         return render_template('show_error_message.html',
@@ -132,8 +135,68 @@ def show_iframe():
     return render_template('show_iframe.html',
                            access_token=access_token,
                            package_id=package_id,
-                           user_email=recipient_user_email)
+                           user_email=recipient_user_email,
+                           iframe_text=f"{iframe_text}")
 
+
+@app.route('/ndc_billing')
+def ndc_billing():
+    access_token = request.args.get('token')
+    if not access_token:
+        return redirect('/')
+
+    # Create a package
+    package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
+    package_id = signinghub_api.add_package(access_token, package_name)
+
+
+
+    # Show error message if needed
+    if signinghub_api.last_error_message:
+        return render_template('show_error_message.html',
+                               access_token=access_token,
+                               last_function_name=signinghub_api.last_function_name,
+                               last_error_message=signinghub_api.last_error_message)
+
+    # Render the home page
+    return render_template('ndc_billing.html', access_token=access_token, package_id=package_id, package_name=package_name)
+
+@app.route('/ndc_billing', methods=['POST'])
+def ndc_billing_post():
+    pass
+    # # Add a document from the document library
+    # if package_id:
+    # document_id = signinghub_api.upload_document_from_library(access_token, package_id,
+    #                                                           signinghub_library_document_id)
+    #
+    # # Rename document
+    # if document_id:
+    #     document_name = package_name
+    #     success = signinghub_api.rename_document(access_token, package_id, document_id, document_name)
+    #
+    #     # Add a template
+    #     if success:
+    #         template_name = signinghub_template_name
+    #         success = signinghub_api.apply_workflow_template(access_token, package_id, document_id,
+    #                                                          template_name)
+    #
+    #     # print fields, so that we can determine the name of the text field
+    #     if success:
+    #         fields = signinghub_api.get_document_fields(access_token, package_id, document_id)
+    #         print('Fields:', json.dumps(fields, indent=4))
+    #
+    #         # Pre-fill the text field
+    #         success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
+    #                                                       fields, recipient_field_name, recipient_field_value)
+    #
+    #     # Add signer
+    #     if success:
+    #         success = signinghub_api.update_workflow_user(access_token, package_id, recipient_user_email,
+    #                                                       recipient_user_name)
+    #
+    #     # Share Package
+    #     if success:
+    #         success = signinghub_api.share_document(access_token, package_id)
 
 # SigningHub Callback, called after a user finishes the IFrame
 @app.route('/signinghub/callback')    # Must match SigningHub's Application call-back URL setting

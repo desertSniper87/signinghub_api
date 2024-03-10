@@ -264,7 +264,7 @@ class SigningHubAPI(object):
             }
 
             # Call the API
-            url = self.base_url + 'packages/' + str(package_id) + '/documents/' + str(document_id) + '/fields'
+            url = self.base_url + 'packages/' + str(package_id) + '/documents/' + str(document_id) + '/fields' + '/1'
             response = requests.get(url, headers=headers)
 
             # Process the response
@@ -361,3 +361,38 @@ class SigningHubAPI(object):
             if payload:
                 print('payload:', json.dumps(payload, indent=4))
             print('status_code:', response.status_code)
+
+    def get_iframe_url(self, access_token, package_id):
+        self.last_function_name = 'SigningHubAPI.get_iframe_url'
+        success = False
+        if access_token:
+            headers = {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + access_token,
+            }
+            payload = {
+                'package_id': package_id,
+                'language': "en-US",
+                'response_type': "PLAIN",
+                'callback_url': "https://www.google.com/",
+                'user_email': "saful.buet@gmail.com",
+                'collapse_panels': "true",
+                'redirect_callback_url': "true",
+            }
+            url = self.base_url + 'links/' + 'integration'
+            response = requests.post(url, headers=headers, json=payload)
+
+            # Process the respon
+            # se
+            if response.status_code in (200, 201):
+                success = True
+                self._print_success()
+            else:
+                self._print_response_error('POST', url, headers, None, response)
+
+        print(response.text)
+
+        return success, response.text.strip()[1:-1]
+
+
