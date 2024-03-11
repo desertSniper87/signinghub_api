@@ -1,22 +1,20 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h2><a href="/?token={{ access_token }}">SigningHub Example</a> - Sign Agreement</h2>
+    <h2><a href="/?token={{ access_token }}">SigningHub Example</a> - Sign Agreement</h2>
 
     {% if not file %}
-        <form method="post">
-            <div>
-                <input type="hidden" >
-                <input type="file">
-                <button type="submit">Submit</button>
-            </div>
-
+        <form method="post" enctype="multipart/form-data" action="/ndc_billing?package_id={{ package_id }}
+        &access_token={{ access_token }}
+        &package_name={{ package_name }}">
+            <input type="file" name="file">
+            <button type="submit">Submit</button>
         </form>
     {% endif %}
 
-{#<iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px"#}
-{#    src="https://staging-sh.bcc-ca.gov.bd:91/Integration?access_token={{ access_token }}&document_id={{package_id }}&language=en-us&user_email={{ user_email }}"/>#}
+    {#<iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px"#}
+    {#    src="https://staging-sh.bcc-ca.gov.bd:91/Integration?access_token={{ access_token }}&document_id={{package_id }}&language=en-us&user_email={{ user_email }}"/>#}
 
-<br/>
-<p><a href="/?token={{ access_token }}">Return Home</a></p>
+    <br/>
+    <p><a href="/?token={{ access_token }}">Return Home</a></p>
 {% endblock %}
