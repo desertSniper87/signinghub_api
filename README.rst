@@ -1,3 +1,14 @@
+
+Quick Start
+===========
+
+If you use poetry:
+
+    poetry install
+    poetry run python runserver.py
+
+
+
 Synopsis
 ========
 

@@ -122,7 +122,7 @@ def show_iframe():
                 success = signinghub_api.share_document(access_token, package_id)
 
             if success:
-                success, iframe_text = signinghub_api.get_iframe_url(access_token, package_id)
+                iframe_text = signinghub_api.get_iframe_url(access_token, package_id, recipient_user_email)
 
     # Show error message if needed
     if signinghub_api.last_error_message:
