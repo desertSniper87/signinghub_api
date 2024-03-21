@@ -399,7 +399,7 @@ class SigningHubAPI(object):
                 'package_id': package_id,
                 'language': "en-US",
                 'response_type': "PLAIN",
-                'callback_url': "http://localhost/signinghub/callback",
+                'callback_url': "https://flask-bcc.gov.bd/signinghub/callback",
                 'user_email': user_email,
                 'collapse_panels': "true",
                 'redirect_callback_url': "true",

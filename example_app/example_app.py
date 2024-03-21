@@ -23,7 +23,7 @@ signinghub_library_document_id = app.config.get('SIGNINGHUB_LIBRARY_DOCUMENT_ID'
 signinghub_template_name = app.config.get('SIGNINGHUB_TEMPLATE_NAME')
 recipient_user_name = app.config.get('RECIPIENT_USER_NAME')
 recipient_user_email = app.config.get('RECIPIENT_USER_EMAIL')
-recipient_field_name = app.config.get('RECIPIENT_FIELD_NAME')
+# recipient_field_name = app.config.get('RECIPIENT_FIELD_NAME')
 recipient_field_value = app.config.get('RECIPIENT_FIELD_VALUE')
 
 # Display the home page
@@ -110,8 +110,8 @@ def show_iframe():
                 print('Fields:', json.dumps(fields, indent=4))
 
                 # Pre-fill the text field
-                success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
-                        fields, recipient_field_name, recipient_field_value)
+                # success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
+                #         fields, recipient_field_name, recipient_field_value)
 
             # Add signer
             if success:
@@ -197,8 +197,8 @@ def ndc_billing():
                 print('Fields:', json.dumps(fields, indent=4))
 
                 # Pre-fill the text field
-                success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
-                                                              fields, recipient_field_name, recipient_field_value)
+                # success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
+                #                                               fields, recipient_field_name, recipient_field_value)
 
             # Add signer
             if success:
