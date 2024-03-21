@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 
+
 {% block content %}
 <h2><a href="/?token={{ access_token }}">SigningHub Example</a> - Sign Agreement</h2>
 
@@ -10,4 +11,10 @@
 
 <br/>
 <p><a href="/?token={{ access_token }}">Return Home</a></p>
+{% endblock %}
+
+{% block js %}
+    <script>
+          {#const popupWindow = window.open("{{iframe_text}}", "_newTab", "width=800,height=600");#}
+    </script>
 {% endblock %}
