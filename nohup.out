@@ -3564,3 +3564,352 @@ UnboundLocalError: local variable 'document_id' referenced before assignment
 172.16.221.237 - - [03/Apr/2024 13:03:51] "[36mGET /ndc_billing_dynamic?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 172.16.221.237 - - [03/Apr/2024 13:03:55] "GET /?format=json HTTP/1.1" 200 -
 172.16.221.237 - - [03/Apr/2024 13:04:07] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+ * Detected change in '/opt/signinghub-api-flask-poc/signinghub_api/signinghub_api.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Detected change in '/opt/signinghub-api-flask-poc/signinghub_api/signinghub_api.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+SigningHubAPI.add_package() completed successfully.
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.upload_binary_document_to_library() completed successfully.
+SigningHubAPI.add_placehoder() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.share_document() completed successfully.
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTY-2F-lkSngODyixU3-2B-0gJ3FvA5gUQt-2B-xrHMFPZBMvNItZmeT-2B-ryibu7hbZEDfXW1ThETVRUF4Nz7Dx5gRPEgIj0PfYzIWdyvKn-2B-eAkJVPtdZ8t4SMfIUHLKLAVxs7wzczRcMS3-2F-Jyl0n1A1m2B6pGmdzoUhCEAPqTpG8uGrAl9-2B-uCj2LBTjodVDQCEn27pAm8I3sRRQhOI5oxzs8JIVvBV7y-2B-gpkpBfDNjNfWmzKEjC8AF6VB2fPvGsZ8MKcRHgD-2B-IXYpwa6KA5C0X9KtdMSTlQCx8p4IY1S4NiWyU2QIPwiR6yywsn59hpvxpsJFtjv2fvvFKf8jm4w6hL3ZknJICDetK9Nmv7ODGQH25ne5hYgPCHCb1ukffmtNw6Tyhm3ELCYUIAlTtU-2F-rT4-2F-B-2B-NutREkH05QVVAQ8SnDPyEUQS-2F-sLPJGJfhIOxgd1LWg8-2B-DMhqqPWQyA-2B-1wmoeBoRVVrA47FRuJCV8oP8ZhSLX7NwQoFL-2B-3bqLWrMhUZgt4gpa2QhaVt5MHW51HpxEtMYPzbzE0YX5h8yRl9mNrh0n40hNIFOnfIALlCwMPgkyq27a7nKRfZr5yGxYPtiRS-2B-r8GQSu30BLWI9Br-2B-WXbf-2B-MK19G55DGR1Dp-2B-ehLPWcAjiNAiYvrI-2F-Br0jOdSbS0Xe3E4-2F-s9ZgDf-2B-JtRazj8-2F-a2JQNUHTFLIgbeVtZKtLRRap64W0fFfY-2B-fHoxPC0SUgN8u-2F-9suABpd5fkyKTNvEVeX6jJQfZ7X-2F-Sq6lPPiJPjjKD9eWX8PxbHtHWQj4lmf9uwxvpPjcgkvhAzQpwvRGADH31WuZeG9vjtRaP-2B-WmIDoMHocDuMVTc10FaiaBWaeLXQRkwOl1cpEsYy8zTIri1WEdCutQyo1NJi5Mz90wrnTcqxQGuOcF6BuYs3FLVsqCPDQfA5UzaVGfVjGvYK14gH4-2F-iuYxXOKZ62YXxhj-2F-cLpHnwsoGFJ1UATEX1H-2B-31zrc-2B-cDF4K520veqcI4G9-2F-rYMoARkkCXS-2B-IV4g1-2F-mVbU234yRUIn7DTXRjemRVskOSAfdvO7PnyYTdL3fvShjmPHXthKzEkeODu69XmkRkeonEHfyz0sjjC6llWc7zHhCp1pGez1rP1NStEUQ-3D--3D-"
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTY38GvHnM1RS-2F-pWZz5GngsVPao1OWD53WR-2B-C8a8flbC4XY3gZqpft9q1Z2-2F-ExsxRFHzhX07Oe0Zk60VjDqF6dPsDC1AksIMkJN-2F-7f692iLk0oB37DfQidDusfaRzrj-2F-JVQ6yYvp-2F-OzqGOmOp7t6AfEpaQpPyaU5GNQacrvQg-2F-9TpLG50H3f8-2F-KTQSvd3zvi05eRtl8j76m6dIr9B72yMQOjnuJ2Kc0MspTbDgcylgMk3NP4XkM736mJq8hdgLC9Xo940sCT3w6UzfoWC62QnY35-2F-yPMJMzLGWedQDwjuPYaCu8KFVS-2F-Id3-2F--2F-oTGThinwjyGWqDMRU5zk9AuQj01hhRumxmHCZmK8enA0g-2B-jMaJkAvmHhqGop9LA9npMtb-2F-denw8gjPHSf-2B-lXt1gcEVsKp6YL7gr1fD5e10-2F-VYEgrSYJWDRrNZveXIE2pPvd4-2B-LLjJCKUSXMdPloDrw9jr-2F-DwOTiKo1ikV8kI9mWbVt6lQD6DUntsK251PR83MFaF0810t2LXJtPXuuNFk2nShPDrYgLTbPJmryMfS3MaJPqR7OaeAW2ASEf1-2F-nzJUvwhbgGbeO4jGwV31t-2B-QOs7P8xAJe-2B-CSVs9GVMP2-2F-l6dplM55ePRrtjhNYjIHHlZqYV-2F-R4AibU1sV3PNLa-2B-s73CRq0lyYD6mewBIiKYLRtf6SGE0YGJrZaUpwxw4vZhMA649ow3J3p5YqVCpiAOnDGCjOBVzWrMvOvRyaOBwpI-2B-22JnKXCEYrPen-2B-CDLftpW733F9H8toY7fbBVDn-2B-FzY1PhrTQzg3WubdmPAkCZMY5rqQyQCNKcvwyQ0Sq0OF5nmSxcvk-2F-zazXswMWLFLfSWL6pGeboh7aT03VBtYDwIMrZO29fHVJ1ODKnJOPyRPUncHMdzSw10NvMzFyObNYyP-2F-MMhe2N552rvRiNPvkrhb53kZ205i3OIcWUUOwFKCZp1ZwBHh8GW5XljtHAjqNhq-2F-BrmfG1ywo-2B-Fhvm9b9AkS1AK6r-2F-7obIr8EwYimiDKQDwufX1ZqsycwbXmW-2F-hLtxZlfMf-2F-GgCAXkjhlpDXsxBUwlAkAmpZgt1E4aEMnvzulAsZ-2B-cznr81oOPSz9u2SsDGhMlQLSnWrQ6cGQQks1YUg-3D--3D-"
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.add_package() completed successfully.
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.upload_binary_document_to_library() completed successfully.
+SigningHubAPI.add_placehoder() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.share_document() completed successfully.
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTU3C9vlVk6-2B-EAKvZ2ZbLjssBa84Zh7Ri-2F-gwna58rII4ic-2B--2F-XbrdT8NC0IQg0TBVlkYxLxkqhlIILQpHxL2RQybGrHYdlIIkqMMrlb690aD0LrqIe8-2B-vXK83DhcQYX1L1liUrfCxDb7aMzMcmzB5io8YlyGTHT6gpTnQPx-2B-5oSvNQ95yaNHbKhEI27HKRDUmEPv0jNKga5vDkUfoJvwnRoK06zPlTjDOAY-2F-riticx5jNpf0V1OisgwZcbtATkA-2F-7xDzQEo0ZTHNPLwL-2B--2F-GLoIkHJKRYvHG-2F-ZAmhORYBW9LflnWYo9F69us9FaPOltGH8v0SCM82wMa2M1FJsZriEw3TBwXLrJub2l5KYZWun0XWjYnMK6-2B-2HQgydO4P6H8-2F-VDG5sYmVfv2doEwS7K494JyADjnk1nj-2B-DlOgQVGkVgQjp8VJxljgskbZHIj2Az5e4qamNVpnTUZoclR0mOpZAZZNtZAsbJyqJIE1AYw-2B-kg-2B-C1zQra85vxrT9dGq0EMl6JI993yuCG4AVb5-2F-CH4IR9vjbp2IRDfFw2bTPzzys2m-2B-NxJ1e3dyexucQV6eH4mIDgFgcq0rMkX817u4vP1FcZVc4j0ZTmvA1pRe6T8yVPClz9PCVntxFdUj7X4QxcTeuQtBnHIqabC6pVD2Ce-2F-QnWrYYX6vl9F57JBkJ5UCNOZ1WG25TkShHUB6QCwKX3nhZue675dpxebeIv3NT94yUOLyor0Fxs0LnnW-2B-bkhXZ2cQSS8zu34q036C2hc4zICUHa6S26ozMwzgUc4EIF29tupXv9blYPf0OH73SLWv-2F-JdQtie6ZbXjzwWOtKdB90y5JwEq0NX5CmV7qecMUG9a79kUPbyX2WVW8nS4IyKZt8-2B-ohXX4rGvSTvV8DNkkqIjH9IYmmfY8LtAxsN0PNufIYndAyN8z8bXHTHljjup-2F-cPhZdCFYXQRIO2BQ5Ggi1cwOcSayMejJD-2B-PnBmVlQ5J8NSxvn9T-2B-qfhbPJ2f13L82BKvt-2B-WIEgFFU9XZ3SqX88oqYIBOO3xSYAOCfWR5cfqFj99HL-2F-s44JbbXacueh2rjnXrT9NimjjDuv5fZWIurZznNJyIZ-2F-HdsKAeSOWX-2B-73BiPcJjPfGg-3D--3D-"
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTW0MyQ-2B-oZQK-2B-nqDKpfnwu7nTyBxjpQAv775BPxcjEqodb-2F-5eFnOI3w8-2B-VjCRgQ-2F-fgpjgs7Lf62OhCm6JHTOZy-2F-gphC-2B-nW12h5h-2B-oPcgA7dMAeh-2B-snd5t4GbOuE5byC4c5E7VtL3BlC3nmTEZZ1Meo2K7Bj8MLfExWOR2CVAiq6ScHLsrcmaorBaPtgM-2F-Cl1C374QgzUN-2F-deY0Npv6iEKNhbjyEXwuivoECdrmx29Vx58cngQBV7JCmeHEnts1Cb2Pm6Jy1oOZJtav8xeoPw4vHKY0MD5H1yu4RgTBb-2F-aT1ZsbIs4It-2B-AfWy4aDFzbUArfvy3066rOF57ZuqgsmPV2nI2arKzLRL2hANeKITmhi1BNAnwPv7bz78xI1FBC42gqux-2F-yEOXLFXSHNxIgau-2B-Qy0yOsDaCeXb-2F-prUcag95tL1fjmn59htfAqtCYmaXfAks5OwgBVREMUp4x248JDYxpHmQ1-2F-lSLbS9otR-2B-fueSCnJmgr0q3Py0pjgRkY4TJp3Vjz8rCBNX-2F-58QChsWf-2F-6LKWzzGEMvFil3svRkQkjZKmy82jN3ilBdPNmuq3e6EkNZZjgrdGPJAyFYaCne6pGGLMHEjo4WwJcOWyCozUY-2B-7oiGN1t8smbt2BcYPPwJDjaQk8S5RbwgLshgbB1UC79KMGTSfqZ3xAguZvDWRkBI560aCzFjHo0BxO2CImyKumdnfGsHtID-2F-y6OTlUMjQyGnbM6fNbns2ISkDmFN4thF50yZ-2B-k3BnYhn9vgHmv0i-2F-gIuWtp1817cPuPh0DBjiL6nuIJIAtgRKAv1yoRCt0Rxi9F5lQPf4B0MSf2ahJFpKS6RwFSv8NEgu889NXCaO0CSOfjaaIrY415sKvUhII08sD-2B-tqCctybZoRkdZvzp6Eu-2F--2F-fobFmjBWVBqFkgJ98fMNa0dG987j3HCowd-2F-6YCAptHX2eJCC-2F-ZYrPBvtv7-2B-I0f1XA7V2Q1vO0ZVbxkAuK9CXytzwghvsJtQHJO9Z-2B-dVCN88yQ056p61K1apqar3dVRrCp3TXs3210lx02EVfCbtqZ5CfpsywhUT69IWE9yCkXuSe6N-2B-Nnwefq2XSwUw42pNryimv1ojuUY6vt7ZNtpjorx09dGgAfutBw-3D--3D-"
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.add_package() completed successfully.
+SigningHubAPI.get_access_token() completed successfully.
+ERROR: SigningHubAPI.upload_binary_document_to_library() failed.
+error_message: The document is no longer available for viewing
+POST https://staging-sh.bcc-ca.gov.bd:92/v4/packages/12362/documents
+headers: {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "Authorization": "Bearer HwViYr6ouYvr31ifhcqvuMGjfyjnkD3_UjWk43yp1wYNT0eGzdQomOd0UHVrRUik5FK2lMumJ5ukDvLVpOhfzpaEpgQ5gtEKjW7_oUDe7CZEUU0sh1pYbdpVwNA7mbQoPVaygzdymP_kOB3ETbBYwe25D1bmcLZaAUZcL4eTpozW-f_PCwznMvLPlKQmueg9YyRnMyvnAw8rarztZJONbIaDrca7O_vlAH9_moW5q867kB3MUQ9CGhHLjyFdPbRryC0rsXwYtRd9iFZ9KL_eHUOCcPvcrIGKnyAakSd0zjUbk1DiA54AL9axIhIWuVtWAedkB-fxTzz9pmCTZ4VGQ4mlSbp93dUDCc773EUD5wSF1fjITGjTNG6giCmDK9Dh-6GLYc2D5W4EN0Nl80-BkpHuaFrnZBTZDZBUxHqivPxLZrnXPbWrmoU4VpVP4iIm22pzkbUB7NsxAhE3oOFbp7s3rvUpx3935p33kF0x6DEwpPt9SMN0rYH9pU-iG6uIa_HMJtZmxRlwIhXo3QN6mjcWgc-AuAEojvseejFLqKs",
+    "x-file-name": "test.pdf",
+    "x-source": "NDC Cloud Billing Portal"
+}
+status_code: 400
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/example_app.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/example_app.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+ * Debugger PIN: 845-662-329
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Serving Flask app 'example_app.example_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://172.16.221.253:80
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+172.16.221.237 - - [03/Apr/2024 14:01:03] "GET / HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:01:07] "[32mGET /new_token HTTP/1.1[0m" 302 -
+172.16.221.237 - - [03/Apr/2024 14:01:08] "GET /?token=EZ0CSX1jUp5ft4STcbRG-hUtKsXvS_xCVkqdVsG1mGsuek1OERdY6wpRo7eMl6sAHrBHh_TwNP5NBRmNC24hIt7qjJejktZj2oKLozOYs-lA4WtW73OMi9dAOF41aUZf3e0-cqhHB8UqtBI83pWyU3dk77_NeiXfJRrfT0dccFAEPPY7UOvNF18_lJ-btxTF-WUjxRI6ubUGpEprPl5VmSadUqLO4Bqj6eYi82uQMN0_vBvMnl8XiB77GRch45hw_r-5mGOKO6zJrnI5_DFnzoCZz80C5cZrvFMWns28ndkA2yiBKg-jAyxiVFFJqvZFKrhPI4Qjn5X_12KtOc43-GSno05oafXKIyKp-oid04wL5rHSLlZ_PAPCI-jzyj6r1F6ldZqj50p9M3prHV9DqRx60iSOPmUyMFKgHoTAd1x6Xmb4zb-U872NbdYMnU8-Bn-xkkJWvZMJNw5zDnBd2EEmQM9FbFejSg-XLpXQmM-RlB1WQ0GCeNvaw3vzPmirid1uQTnYG0rriNSnYDxS5L3z15IoMf-RonildE0LJpE HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:01:10] "GET /ndc_billing_dynamic?token=EZ0CSX1jUp5ft4STcbRG-hUtKsXvS_xCVkqdVsG1mGsuek1OERdY6wpRo7eMl6sAHrBHh_TwNP5NBRmNC24hIt7qjJejktZj2oKLozOYs-lA4WtW73OMi9dAOF41aUZf3e0-cqhHB8UqtBI83pWyU3dk77_NeiXfJRrfT0dccFAEPPY7UOvNF18_lJ-btxTF-WUjxRI6ubUGpEprPl5VmSadUqLO4Bqj6eYi82uQMN0_vBvMnl8XiB77GRch45hw_r-5mGOKO6zJrnI5_DFnzoCZz80C5cZrvFMWns28ndkA2yiBKg-jAyxiVFFJqvZFKrhPI4Qjn5X_12KtOc43-GSno05oafXKIyKp-oid04wL5rHSLlZ_PAPCI-jzyj6r1F6ldZqj50p9M3prHV9DqRx60iSOPmUyMFKgHoTAd1x6Xmb4zb-U872NbdYMnU8-Bn-xkkJWvZMJNw5zDnBd2EEmQM9FbFejSg-XLpXQmM-RlB1WQ0GCeNvaw3vzPmirid1uQTnYG0rriNSnYDxS5L3z15IoMf-RonildE0LJpE HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:01:16] "POST /ndc_billing_dynamic?package_id=12363%20%20%20%20%20%20%20%20&access_token=EZ0CSX1jUp5ft4STcbRG-hUtKsXvS_xCVkqdVsG1mGsuek1OERdY6wpRo7eMl6sAHrBHh_TwNP5NBRmNC24hIt7qjJejktZj2oKLozOYs-lA4WtW73OMi9dAOF41aUZf3e0-cqhHB8UqtBI83pWyU3dk77_NeiXfJRrfT0dccFAEPPY7UOvNF18_lJ-btxTF-WUjxRI6ubUGpEprPl5VmSadUqLO4Bqj6eYi82uQMN0_vBvMnl8XiB77GRch45hw_r-5mGOKO6zJrnI5_DFnzoCZz80C5cZrvFMWns28ndkA2yiBKg-jAyxiVFFJqvZFKrhPI4Qjn5X_12KtOc43-GSno05oafXKIyKp-oid04wL5rHSLlZ_PAPCI-jzyj6r1F6ldZqj50p9M3prHV9DqRx60iSOPmUyMFKgHoTAd1x6Xmb4zb-U872NbdYMnU8-Bn-xkkJWvZMJNw5zDnBd2EEmQM9FbFejSg-XLpXQmM-RlB1WQ0GCeNvaw3vzPmirid1uQTnYG0rriNSnYDxS5L3z15IoMf-RonildE0LJpE%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:01:26] "POST /ndc_billing_dynamic?package_id=12363%20%20%20%20%20%20%20%20&access_token=EZ0CSX1jUp5ft4STcbRG-hUtKsXvS_xCVkqdVsG1mGsuek1OERdY6wpRo7eMl6sAHrBHh_TwNP5NBRmNC24hIt7qjJejktZj2oKLozOYs-lA4WtW73OMi9dAOF41aUZf3e0-cqhHB8UqtBI83pWyU3dk77_NeiXfJRrfT0dccFAEPPY7UOvNF18_lJ-btxTF-WUjxRI6ubUGpEprPl5VmSadUqLO4Bqj6eYi82uQMN0_vBvMnl8XiB77GRch45hw_r-5mGOKO6zJrnI5_DFnzoCZz80C5cZrvFMWns28ndkA2yiBKg-jAyxiVFFJqvZFKrhPI4Qjn5X_12KtOc43-GSno05oafXKIyKp-oid04wL5rHSLlZ_PAPCI-jzyj6r1F6ldZqj50p9M3prHV9DqRx60iSOPmUyMFKgHoTAd1x6Xmb4zb-U872NbdYMnU8-Bn-xkkJWvZMJNw5zDnBd2EEmQM9FbFejSg-XLpXQmM-RlB1WQ0GCeNvaw3vzPmirid1uQTnYG0rriNSnYDxS5L3z15IoMf-RonildE0LJpE%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/local_settings.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.add_package() completed successfully.
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.upload_binary_document_to_library() completed successfully.
+SigningHubAPI.add_placehoder() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.share_document() completed successfully.
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTfzrDRT8EYgoAxERvWZJwgu19UdKcSaBKyl23cjNaZFqvd9QS6o4iaOgm5Qi8QL0jhq6W2UXCeqM2uriGAigl4YrqAb2-2F-JvSEGJ85clAakH5QR9lC5tJkgu0CSumt93sM9KHc-2B-XOfznwm9nr0O1GRyQ1TxrPLI8LlR4Lr6-2F-yjx8YQ9gyOSqs5OlaFyM4K9wYpZfzL2RSM9I3YHOUvfS-2F-geTEhE6WfiDGXIE4tFZOIcDGxQXPRMrC7KkZCjj-2F-N37KLAKREJj1OSLskWXmvsGzZ9BgvMOGzan3xcRy4LlKj8-2F-UBRhWbcfE-2B-1ZSp4Rr1N8hnwynMaB8cw80-2B-QauQHSaROjde2VDe3-2F-Gjgll4W-2B-faYfyC8asF2k6DimmH3QDeg46grxiz87buqSt-2F-pncyTup3B4rca3r5-2B-TBXt-2F--2B--2B-YOhoT-2F-hmcRCF2Nvn9doA9wz7r7dFxWvrxbJvCXNuX9Tr-2F-WcDKHDwWQnfVCuuAXlKLpySzQBapF1ZpTw3WjUHPSEaF4aBH-2B-RbWbZP8M9ubF9Kq6N6VDhMrDT04T373tkCtZAvocLv2V0QgmI-2F-J3D-2B-EytNRPJrwn0PDfJdNqGmduHMYD2a81liDeu8v30UAXgBpA8N-2B-MTnyWOKRvDTBS5RrCI4fpUbMWbDBQRvx-2B-9KlPLmMomOfXnejRYzy8GoT5l-2B-90leNPkjnlVg6KCj9HnjbyYTkHkXmIwDUSRW8ngzVhOx-2F-tZYJgpx0-2F-9B2PyqO3-2B-P7EZvujpDxwpB7e0tU9gkgL-2F-6hM2vPNf5dkIPrETz-2B-i02GRLhqako-2B-rk2bL-2F-WzvbmQ4gB10tiPGXVbyn6FU6KiDkBojfRkCdNufskuLT5hlb1uUsaOdylVck89rxOh7c52FULPt2ABv8iGN8wOPUdJRsFKmS1c3OczjawLCpOeY2ZBxjNuHr-2F-RzBvb6lBhYzHuiD-2F-to-2F-a31LGdTiFLouxpk-2F-xyp6-2F-fV6np6N3Scz6zVSpfrxRXvWMicmgHu1FJJrbR4rlZbCSf-2F-XItwbRKP3XwR819E6-2F-v-2F-NMO4G1Y6lsUxCJ6XGXa-2F-EYN3U-2B-9A-2B-mqx2vHow40qZb2JR4eWu4QlyMKJew-2F-0cnBLwDXG0kHASho4cLRA-2B-oCcvrw-3D--3D-"
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTT5oHgVAtNTDcT-2F-LjxNDUMpxD3RMobxV2bte2V0yrhoqsDwY7VdxFbEIbvG92rjOL8J7O-2B-J-2F-ov8t5TB6f98rM6-2B-8DzTiE49f6uq3pJGIYwblIA3abY0AGUob5ZlJuiRNseMCXX4K3Yvh0rp3jtmeBmYklj0Gl0qzDFLOr55zZ5c-2B-pch5EhrbnXxf0PyREMvVg-2F-V-2F-1XquPCLY7qeAV0avZ0CVg-2B-UeoTmzhyyyJwT6Yjho-2F-bNjdZEIdxXOO9e3d0AH4ObSkgAFBlgJ99IWtlFDeSOY1-2B-zXu497A-2F-VZ07tDK9EvW65xGmLoXMJO-2B-S7WnIMrVbK8ey-2F-r4RQ6BALIf7i0ObyBO1Kq8MCkY0p2RRU6cmp-2B-toyuK0VZSUojOVezHINWPjUEPztT-2B-P-2F-wdJNJlAnoDEOV-2B-kkXWJ7QQBGB8TkqzCgaPpWCf9qnNvfTw8xltWBcGNKuyCmlkfit13fb51DHEAJIRJEJGxtgrMEP03mUpStVrmbplkGpG8ehWuePxniUD38dLUOqaNj8CSZa9lWF330vQ2b4hfZ8bt47WOQwtPFmYYRIBncWRTmIkQmcgBDNWu-2F-G77ZFvILQlMgfjH4D74x-2B-3A6YlNUZxT4fCv8hP6W371qrMif3uhxRgOKN0JqFT2RX-2B-lZdLIns1yuDOyqWFcJC8OH7MEcxO8tDcJBPNN-2F-Oqt43GvVLflOq0sKMffRiDAzMsSAZj3Ju2TBZXIEeKP7NiEimosNw75qT91Bvj3HzXt0tswqfVDAO7BHUjeygWyBR-2B-LsaC-2B-nhJVH8htkwMFiy-2F-z93XhtJmG2aVsQp8lI0fQO2u7GiZy1hkf5z3LaO86HzAbzA4-2F-kR2-2B-wqcWnzc8E7qAtqv9Z9KdWQPxqrYWVgVV-2F-5X70p5mSU3X9iupcQceJmoANnG-2B-xVuggZcoySc6AmxRBhMOT6xnAYqibtgqXl-2F-BrudSJmJrflPiFmETh-2F-RY6iXXNRKqBFnWE-2F-mEZ9aVShyJ3RUZTfSDVBcyD5HHckPvje1QnTja7mgjH-2F-cJUZHPVhzluw0xsArn91hQMRW3ZnqcZxqZlKjNK92Keop4PLnFyYOOrB8ZimDwEYIlbQ71f4Beb-2B-q0PR7IT9WHUGXPMlMLxHu8ZLTg-3D--3D-"
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/local_settings.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Serving Flask app 'example_app.example_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://172.16.221.253:80
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+172.16.221.237 - - [03/Apr/2024 14:06:22] "GET / HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:24] "GET /new_token HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:25] "GET /?token= HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:26] "GET /new_token HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:29] "GET /?token= HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:30] "GET /new_token HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:06:31] "GET /?token= HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:12:12] "GET /ndc_billing_dynamic?token=MS8cxMHQIlfUmgMondCsTtQ-grdcIONuWkOBrpZ4M6HkyIA03MLMs7WjwcLRIfCVazRJcXqt9y_eDsmKgel3Iv-RhZ_K4z5DHZnw8vLlaX_YNwM0uuHLesxOEPxYzA6uuE62rV1xaN8Y40g3RiMcsx1mZv5kNy8C9UrNW-rS9AaJJcj8uEVlgCR41NgPnlzwU8qhMMeHlmyVV3VR1yzNsdtYTI2kr5Qqjq1BYuSWTxUhlwBAxNtZyugo8PEcx0LumJ6lTtjeH0V_8Pmga4771zZG88JLFbzoMioa_iC3_0uojiLH0h5Vm9zBucWSeqGG7VbTDGu-DdcUt20VuW5LKMugIWZUCXbwF2Xl_yqjMsfB-rzFY4BQegK5AmV4qufDg9i8VnERSVJAs59AhhlB2YuKPze7ZAvqTvnDFGiKRF6eNOArp9dcEzs_HM64pCpk0zDNprY2Ln94mz6oFXUcaiej4WnO2l9409H3onjqSY6c6-j0OUKsmZ9zIlsE3oRY0u4a99urhJwCv6xgRWenV2YoQgz7-ys5B8ba0mF2RFtFIYUOl_0X-SyWnnebJaul HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:12:13] "POST /ndc_billing_dynamic?package_id=12365%20%20%20%20%20%20%20%20&access_token=MS8cxMHQIlfUmgMondCsTtQ-grdcIONuWkOBrpZ4M6HkyIA03MLMs7WjwcLRIfCVazRJcXqt9y_eDsmKgel3Iv-RhZ_K4z5DHZnw8vLlaX_YNwM0uuHLesxOEPxYzA6uuE62rV1xaN8Y40g3RiMcsx1mZv5kNy8C9UrNW-rS9AaJJcj8uEVlgCR41NgPnlzwU8qhMMeHlmyVV3VR1yzNsdtYTI2kr5Qqjq1BYuSWTxUhlwBAxNtZyugo8PEcx0LumJ6lTtjeH0V_8Pmga4771zZG88JLFbzoMioa_iC3_0uojiLH0h5Vm9zBucWSeqGG7VbTDGu-DdcUt20VuW5LKMugIWZUCXbwF2Xl_yqjMsfB-rzFY4BQegK5AmV4qufDg9i8VnERSVJAs59AhhlB2YuKPze7ZAvqTvnDFGiKRF6eNOArp9dcEzs_HM64pCpk0zDNprY2Ln94mz6oFXUcaiej4WnO2l9409H3onjqSY6c6-j0OUKsmZ9zIlsE3oRY0u4a99urhJwCv6xgRWenV2YoQgz7-ys5B8ba0mF2RFtFIYUOl_0X-SyWnnebJaul%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:12:14] "[33mGET /None HTTP/1.1[0m" 404 -
+172.16.221.237 - - [03/Apr/2024 14:12:16] "GET /?token= HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:12:17] "GET /new_token HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:12:18] "GET /?token= HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:17:04] "GET /?token=zryBpkKQUO0jhexF4tB_UiBugyDoHIT86zptrbVyfuVS2114hyYgg-XTyTS-3VmBxbl4qi_wo4IB8CXclB8eXQm3wSosvpmv-mffyYV8OfZYuVLw06B-jvmCOuizqdKERAG5U-RE1M2pwYcnETM66P5dzl63FbuNS3DBfNcPmfSSOj9l8jDaMqUAG11A4K4VLxSoeO2zMf9m6o0DhF7J1DfVmBUHPXUE_0DObXssq6jNlijA1sghXjSaFbxOmvGHgGS_7PXdd8fnu-sGtF8hhhn2pyf6Z_i6E3odGvcejRf4d-YYJGFj_Hwgj8QjPb4XWkZlLKfImM-jmKVw1HJIi8juvCOjUsKkDMJo7D0seMUC7h3e9o1UAJg_YctkheMRjL9FDRDrD-fbDoN08uYQk6E-BPNtxewuJDeLLRVk6ZEvDI5POROUhzmzKjw1-gb_j2FueBEXOWeOP6N5Gt8AnxJdCv-wnb0zQrBm97IY3930IElTo003fFCOYvl8IUXhOdMMvxOaJsDFHPxGwJA8rirdx6QzL1aOVWoSBLxLCiI HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:17:07] "GET /ndc_billing_dynamic?token=zryBpkKQUO0jhexF4tB_UiBugyDoHIT86zptrbVyfuVS2114hyYgg-XTyTS-3VmBxbl4qi_wo4IB8CXclB8eXQm3wSosvpmv-mffyYV8OfZYuVLw06B-jvmCOuizqdKERAG5U-RE1M2pwYcnETM66P5dzl63FbuNS3DBfNcPmfSSOj9l8jDaMqUAG11A4K4VLxSoeO2zMf9m6o0DhF7J1DfVmBUHPXUE_0DObXssq6jNlijA1sghXjSaFbxOmvGHgGS_7PXdd8fnu-sGtF8hhhn2pyf6Z_i6E3odGvcejRf4d-YYJGFj_Hwgj8QjPb4XWkZlLKfImM-jmKVw1HJIi8juvCOjUsKkDMJo7D0seMUC7h3e9o1UAJg_YctkheMRjL9FDRDrD-fbDoN08uYQk6E-BPNtxewuJDeLLRVk6ZEvDI5POROUhzmzKjw1-gb_j2FueBEXOWeOP6N5Gt8AnxJdCv-wnb0zQrBm97IY3930IElTo003fFCOYvl8IUXhOdMMvxOaJsDFHPxGwJA8rirdx6QzL1aOVWoSBLxLCiI HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:17:09] "GET /show_iframe?token=zryBpkKQUO0jhexF4tB_UiBugyDoHIT86zptrbVyfuVS2114hyYgg-XTyTS-3VmBxbl4qi_wo4IB8CXclB8eXQm3wSosvpmv-mffyYV8OfZYuVLw06B-jvmCOuizqdKERAG5U-RE1M2pwYcnETM66P5dzl63FbuNS3DBfNcPmfSSOj9l8jDaMqUAG11A4K4VLxSoeO2zMf9m6o0DhF7J1DfVmBUHPXUE_0DObXssq6jNlijA1sghXjSaFbxOmvGHgGS_7PXdd8fnu-sGtF8hhhn2pyf6Z_i6E3odGvcejRf4d-YYJGFj_Hwgj8QjPb4XWkZlLKfImM-jmKVw1HJIi8juvCOjUsKkDMJo7D0seMUC7h3e9o1UAJg_YctkheMRjL9FDRDrD-fbDoN08uYQk6E-BPNtxewuJDeLLRVk6ZEvDI5POROUhzmzKjw1-gb_j2FueBEXOWeOP6N5Gt8AnxJdCv-wnb0zQrBm97IY3930IElTo003fFCOYvl8IUXhOdMMvxOaJsDFHPxGwJA8rirdx6QzL1aOVWoSBLxLCiI HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:17:10] "[35m[1mPOST /ndc_billing_dynamic?package_id=12363%20%20%20%20%20%20%20%20&access_token=EZ0CSX1jUp5ft4STcbRG-hUtKsXvS_xCVkqdVsG1mGsuek1OERdY6wpRo7eMl6sAHrBHh_TwNP5NBRmNC24hIt7qjJejktZj2oKLozOYs-lA4WtW73OMi9dAOF41aUZf3e0-cqhHB8UqtBI83pWyU3dk77_NeiXfJRrfT0dccFAEPPY7UOvNF18_lJ-btxTF-WUjxRI6ubUGpEprPl5VmSadUqLO4Bqj6eYi82uQMN0_vBvMnl8XiB77GRch45hw_r-5mGOKO6zJrnI5_DFnzoCZz80C5cZrvFMWns28ndkA2yiBKg-jAyxiVFFJqvZFKrhPI4Qjn5X_12KtOc43-GSno05oafXKIyKp-oid04wL5rHSLlZ_PAPCI-jzyj6r1F6ldZqj50p9M3prHV9DqRx60iSOPmUyMFKgHoTAd1x6Xmb4zb-U872NbdYMnU8-Bn-xkkJWvZMJNw5zDnBd2EEmQM9FbFejSg-XLpXQmM-RlB1WQ0GCeNvaw3vzPmirid1uQTnYG0rriNSnYDxS5L3z15IoMf-RonildE0LJpE%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/opt/signinghub-api-flask-poc/example_app/example_app.py", line 387, in ndc_billing_dynamic
+    success = signinghub_api.add_signature_field(access_token,
+  File "/opt/signinghub-api-flask-poc/signinghub_api/signinghub_api.py", line 333, in add_signature_field
+    self._print_response_error('PUT', url, headers, payload, response)
+  File "/opt/signinghub-api-flask-poc/signinghub_api/signinghub_api.py", line 432, in _print_response_error
+    self.last_error_message = response.json().get('Message', 'Unknown error')
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/models.py", line 850, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+172.16.221.237 - - [03/Apr/2024 14:17:11] "POST /ndc_billing_dynamic?package_id=12367%20%20%20%20%20%20%20%20&access_token=zryBpkKQUO0jhexF4tB_UiBugyDoHIT86zptrbVyfuVS2114hyYgg-XTyTS-3VmBxbl4qi_wo4IB8CXclB8eXQm3wSosvpmv-mffyYV8OfZYuVLw06B-jvmCOuizqdKERAG5U-RE1M2pwYcnETM66P5dzl63FbuNS3DBfNcPmfSSOj9l8jDaMqUAG11A4K4VLxSoeO2zMf9m6o0DhF7J1DfVmBUHPXUE_0DObXssq6jNlijA1sghXjSaFbxOmvGHgGS_7PXdd8fnu-sGtF8hhhn2pyf6Z_i6E3odGvcejRf4d-YYJGFj_Hwgj8QjPb4XWkZlLKfImM-jmKVw1HJIi8juvCOjUsKkDMJo7D0seMUC7h3e9o1UAJg_YctkheMRjL9FDRDrD-fbDoN08uYQk6E-BPNtxewuJDeLLRVk6ZEvDI5POROUhzmzKjw1-gb_j2FueBEXOWeOP6N5Gt8AnxJdCv-wnb0zQrBm97IY3930IElTo003fFCOYvl8IUXhOdMMvxOaJsDFHPxGwJA8rirdx6QzL1aOVWoSBLxLCiI%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ERROR: SigningHubAPI.get_access_token() failed.
+error_message: Unknown error
+POST https://staging-sh.bcc-ca.gov.bd:92/authenticate
+headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+}
+payload: {
+    "grant_type": "password",
+    "client_id": "ndc_billing_client",
+    "client_secret": "F48EA2DAADAE0A223AAF4350F96DE5EC429A91F80A8F4B473FC450357DE89C0F",
+    "username": "torshobuet.owner@gmail.com",
+    "password": "123456"
+}
+status_code: 400
+ERROR: SigningHubAPI.get_access_token() failed.
+error_message: Unknown error
+POST https://staging-sh.bcc-ca.gov.bd:92/authenticate
+headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+}
+payload: {
+    "grant_type": "password",
+    "client_id": "ndc_billing_client",
+    "client_secret": "F48EA2DAADAE0A223AAF4350F96DE5EC429A91F80A8F4B473FC450357DE89C0F",
+    "username": "torshobuet.owner@gmail.com",
+    "password": "123456"
+}
+status_code: 400
+ERROR: SigningHubAPI.get_access_token() failed.
+error_message: Unknown error
+POST https://staging-sh.bcc-ca.gov.bd:92/authenticate
+headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+}
+payload: {
+    "grant_type": "password",
+    "client_id": "ndc_billing_client",
+    "client_secret": "F48EA2DAADAE0A223AAF4350F96DE5EC429A91F80A8F4B473FC450357DE89C0F",
+    "username": "torshobuet.owner@gmail.com",
+    "password": "123456"
+}
+status_code: 400
+SigningHubAPI.add_package() completed successfully.
+ERROR: SigningHubAPI.get_access_token() failed.
+error_message: Unknown error
+POST https://staging-sh.bcc-ca.gov.bd:92/authenticate
+headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+}
+payload: {
+    "grant_type": "password",
+    "client_id": "ndc_billing_client",
+    "client_secret": "F48EA2DAADAE0A223AAF4350F96DE5EC429A91F80A8F4B473FC450357DE89C0F",
+    "username": "torshobuet.owner@gmail.com",
+    "password": "123456"
+}
+status_code: 400
+SigningHubAPI.get_access_token() completed successfully.
+ERROR: SigningHubAPI.upload_binary_document_to_library() failed.
+error_message: Document is no longer in draft state
+POST https://staging-sh.bcc-ca.gov.bd:92/v4/packages/12363/documents
+headers: {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "Authorization": "Bearer iJWaDf8Ukw2pMuTAM6u7rm7Ux3kjnNCXDEGExn8NTmC37_rQkC-o95QR8opGeI5kax0fOlIDfFSeCY9bCccP059aY30iU9NkkagAFf5Cg-0uKdoXtjAEV3_qMOS5LVbDXK-OEw_Z86u7neVklfNwX5kgH3og8CeVN8t9C9Wpj636ILomT5OEDdwb6q4o5B8AfMOoj7sVhWKtV0KgKF6pD81RMH2GEYxg1LYxAR-icdTav1BUCFpq9DxBE64LzPyz-QdGE6tRBEcgBB1dfdyRrTX9U82ccEI7foOEQ14rMVaikNwZRYByu6NM3oNmge_cGYRUeHz7v7B6gcuhJ8kfNxU7Ac_1DVfyywqEO8UzoQSl31PSVgQxupLdh9EW5k5RsT6gHn0hU_bSAVOrindBQT4rguGana8Zq9TIRWaHTH62o4biFegIoEbPXgrlwWt2qiZrEFGc07cjCbqwOTrNQayoCT8oJkMExXcNPTChjLKJeUOZnLkttRTgow9rVxf0TMiekB1Vbp-LPsc2ODFgni_oOLUrro23C7Y_ZjVboZo",
+    "x-file-name": "test.pdf",
+    "x-source": "NDC Cloud Billing Portal"
+}
+status_code: 403
+SigningHubAPI.add_package() completed successfully.
+SigningHubAPI.upload_document_from_library() completed successfully.
+SigningHubAPI.rename_document() completed successfully.
+SigningHubAPI.apply_workflow_template() completed successfully.
+SigningHubAPI.add_package() completed successfully.
+Fields: {
+    "signature": [],
+    "hand_signature": [],
+    "electronic_signature": [],
+    "initials": [],
+    "in_person_signature": [],
+    "text": [],
+    "radio": [],
+    "checkbox": [],
+    "dropdown": [],
+    "listbox": [],
+    "qrcode": [],
+    "attachment": [],
+    "comment": []
+}
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.share_document() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTd7DK-2B-ns1nAooUjx-2B-VvX7FsXNbAV0uEssGTWaVOvZ7wa5ff-2F-fEgaAyabCBq0SPMlNCvXySYsKYkHVziGq03q3II-2B-27nkB6RI6T8AibbOqbB3TsmiJyS7qjnzNd35HlhQkwCxGaLG-2B-4Ye7-2B-31xCwbUYAZrKPlqn2GlmB70pPTi9H2SNtaX16iPEsq1TMYePY6uXpaC97-2B-Y8sfLL7eIfOYS04JNQuHED8ZiJwfcAVjWseEDrMBr8AdjBBuAOHqHp6qpWQ8vlMF9mC-2B-V3KGrGdJ-2B-bDmWXA6ANOTSnPzl9-2F-UNgAqXpP5h2bvcC-2B-glFqDoPdfVq1Ol-2F-4pewDCy1HDxKvP5-2F-jV7lpYX9iyUQQVQ3RqRbXXStzX7f8T7VrrdDY-2B-xUCqj9GMaIcrt1CKopOl9hupDdlWh06rC7JD8bismr-2F-vW2TQbWNft7w6zBidjupWfplPI3vc6ZkIQx0NTMnaRpDyJdI0Fao3pqpyaA8FQW4vFiME8R5wkzv27bRW4-2B-56LLedtG63FEhj02g4dxNHh-2F-tNyXWkbtS-2B-HioqmvLDKGUoZqu1tczOSVkjFq6Ix8wBx7RrInuWsbeTlUxN9vYD0LQja9QZS54JHkcQUil1NgJNaGa2SFJa2BSrtKAEEZBgrP6qpRADA-2F-xysqNH2mrQlKoyQAQrTHktNL9hmv26msCnaR-2B-r4fekVtmE8NHvS1X-2B-VomtNZY0P3Kd5-2B-0XX2nZL92ocQ5iruIVSjbzFyGU2a0Q6eEJw-2F-mq9pACHdWyDr-2F-f-2F-2ZcH0W-2F-AktulGLtDS2oSgZBNXucRTBnNby6nN4V-2F-Yl5ltbASJbNvkOQxoZzGRba8ayPBg3R8gDPZWgZStafvWgnVaqJJsKe-2F-AhWtkDuHBj1Y6K-2F--2B-78YxoxXCcYXGgMRP1wOhOvyuRhK0aHn-2F-LkH-2F-tknfEq-2F-Dow-2F--2F-Ocr4KBhu-2F-f5PllDjx5oTM3UAabGziNn8ZYE1-2B-I5N5dquGIFkmuk8f7gjQFVNtv1sERQRMQR5uebKDUoVmlS61lWWDY0so-2F-YxVgVMNyc3cFzTQ4O1fPtMh-2F-ovatS1D8HedU6Pq5aZrxN9NZ8TsW5vLWY324BLX2qULVabnwSQBmYKZNZKYdIwM-2F-gcLkDAQ-3D--3D-"
+SigningHubAPI.get_access_token() completed successfully.
+SigningHubAPI.upload_binary_document_to_library() completed successfully.
+SigningHubAPI.add_placehoder() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.update_workflow_user() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.add_signature_field() completed successfully.
+SigningHubAPI.share_document() completed successfully.
+SigningHubAPI.get_iframe_url() completed successfully.
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTdTeWN3awCJQO5WyuGdpaXubERotk1pDGa9eECmSMZYxidQkkX1AAjm1zNgDbEJDQC9C5pCpknHYH4JJRUMZMheia-2F-jDCIl88ed13eeSV54hS2iyMjvo2MUOYIAZI9J0ClhKGJbFC5pFtVFv3qElsmDzwQfB7R4NS3IlVB3b9J9XlWXBjTOLfFr-2B-EY2JS8SadwIM3hwo2fREgV7NDaiDiqDtJI6CSRXYnpUXGUKDFB9P3bEFbLK0llh2EQXCq3-2F-sJWm8lrf0m8mI7rRztwF2nwo3BPa1UPPBNjF7rfcMnpkSlns9wrKnVFfnysSxNe0euaDkEVPBTCznbUcEEISJwsghnIUbvBy3Zh4yL9a58Jgk-2F-MbI6nyVUWHlb0mRry2XVdC5gf1xFL1FztQibrKTPCiwrtfGt66UIRE2DfB-2B-aWwKQp02cJA9bTbVl22fKMDfRPzWjdH-2F-DkhBuz0oW3RxVzQC6kHfxy2xpQvCZ0zxnPSQ8QlON4WXbdYYLimJpvPfbUcJoAuvIDHCr540ELeOP-2F-WpghCEnCtRQdSo3ZeUaOA261gbykRarom4p73CpoalXAaHfO6fikrnTRQZc4oX6ExBC336TqfLp0w3YKLMCGcr6d8c0eOh1mFiCjdG6ZQK1w0H2nyPqWwnJPrDDbz-2B-S6ilNcgJNYUtAqXegCLKdu6tqaTFLYNvdmfCCU37c07oYZELopnQsmuBrYvmljrKzpUa8i972S8TqCOpgAxMac26te4VGvxavScTyrYFRiojeNF853a7P9GWBGLutriS8fcRYLvXTQ37Le1jmRTOuDQVeA4mjIwNz0hetH827a87SbH5SpRSu-2F-vIDEqy6LLD0yGQxUYV45yqwh6vTGA23BG8Eqi-2F-NVPqapA19ULD7QWhw5bGOcZgwWMSUMMlkfbVHuObmI3txUzaLEm6DiV26CQVDCF4KjGcHiTcefqUvAkjlLfUHp4UNWKxqDrDwGwl25ADP1h7lJRLXto5g-2B-Wr89VgUCFZsLg3O2KyB5uowVGr5d-2B-Lusia2rG-2F-1s1AfVk2-2F-nSSc7aju-2B-rtDJUYEs7kCiv3L5I8W8xTqIM5b8Ie2SXv0ahs5ZoxIqgv-2B-SfwgeHrx-2B-buNg-3D--3D-"
+SigningHubAPI.get_iframe_url() completed successfully.
+172.16.221.237 - - [03/Apr/2024 14:17:23] "POST /ndc_billing_dynamic?package_id=12367%20%20%20%20%20%20%20%20&access_token=zryBpkKQUO0jhexF4tB_UiBugyDoHIT86zptrbVyfuVS2114hyYgg-XTyTS-3VmBxbl4qi_wo4IB8CXclB8eXQm3wSosvpmv-mffyYV8OfZYuVLw06B-jvmCOuizqdKERAG5U-RE1M2pwYcnETM66P5dzl63FbuNS3DBfNcPmfSSOj9l8jDaMqUAG11A4K4VLxSoeO2zMf9m6o0DhF7J1DfVmBUHPXUE_0DObXssq6jNlijA1sghXjSaFbxOmvGHgGS_7PXdd8fnu-sGtF8hhhn2pyf6Z_i6E3odGvcejRf4d-YYJGFj_Hwgj8QjPb4XWkZlLKfImM-jmKVw1HJIi8juvCOjUsKkDMJo7D0seMUC7h3e9o1UAJg_YctkheMRjL9FDRDrD-fbDoN08uYQk6E-BPNtxewuJDeLLRVk6ZEvDI5POROUhzmzKjw1-gb_j2FueBEXOWeOP6N5Gt8AnxJdCv-wnb0zQrBm97IY3930IElTo003fFCOYvl8IUXhOdMMvxOaJsDFHPxGwJA8rirdx6QzL1aOVWoSBLxLCiI%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:18:57] "GET /ndc_billing_dynamic?token=rabJ6ktRuLLi1_8qQFtkyBiaaj95y3_dfr5zQ5D67xjGtm65lMAaLfkdEjhug_HS0xuI6uNjzcOvS3cONfvZZKqIYTp_zW0i9zGffJQFEM8d5PdMokFhwKUOMB3voimEhwURQXR3hOvQntYCD2o-NJv7z2othHmeMIThAcqrVw06CFkdXVmC4PKij5I51aC5Ila6lUq8Qpy6vPU35e0NwSxac6YIppypi0JrndWgJnVpdmVFAxAjc3fLUAYHf3N1HVqfO1mg0k4j9Oz4mOa_B9wkra6V-ziWXTcZyLAiLoHImi53xP22VV7SSQa4oOzCl3vAl68rMiOflpbUybGrTQ4rN9CwaWmzq4KJzhHCr5dF6lZuAS-OPbLRuz9PzMSH1iML3jOYGod8NfWVE6KjbvIMBU15gy1JI9MtXdv9vz4iCjLdA4CfdodjVuwt1CUUbCFNgPx6_MOJqP1DL8urkmFyV2QrACDRjmcTJ-kPkMTpOG8FIcsVNDIH1z0qt0vkcmBlUzyaaqw4rcc9i3qa98IQ3lDLWoB9drBWx3fnu_Nf7h_gjqDpjq5_Q1BI1Uyz HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:19:21] "GET / HTTP/1.1" 200 -
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/local_settings.py', reloading
+"https://staging-sh.bcc-ca.gov.bd:91/Integration?q=QUVTMjU2LUdDTY-2B-RDYCLBUfhNXswO63V4NRGiNCznLZB5LjLB4CAocNg0Nh7dV03wAvioubertPrAD6FJxfqrVMhuC9msGaBQyr2xuFxfxU3UE0mbvSucBeBJdgbekYfaxuoOpeuK8z4yMV0rlXuiAimmU3R2VhNabAZHTL7WGAqUuTvlaENB8Li8JPgpmtPdQ8Hr5gQY2AJ2VkGaGeRqiWClOVYgX3qjfjClkKw9k3mzTiG0hdtHlhI-2B-PyVE9YQCvwN3k5bHjcmfRnx74tjaxl1hYcdptznt17LuLX1wjqrvXesb-2F-K-2B-Q0CNIWjetHWJ3ez9ssy-2B-CM-2F-Lg-2B-r2lfer9kZWlbmFD-2B-6GMLl8N1-2F-N5gr2aLX-2B-PsZK84SN5GTs-2B-Y5YyxYV42nC4MyInOy5boSSHPj-2B-LSe-2B-vGX9rLjWlZYh2FUtrYgZgVcj63GuYIs2b0FkzaACaJEBhDI1pbEuCOsmJrhiU1unOo9DRxtD-2B-coV2neQx9vdp9I7zYBrXIFF-2B-rAiAlAenqeQOGs-2F-OrFxL2tfuksLB8qAwIIZhyZ7aj1jDZPGbMyafIpwZCVgVM2BLjqtajPU7ZphGTZdG6NS-2F-ev-2B-fX2y4pugKC-2B-36FRNaLKrPAzlyILilONNYJqq-2F-305rnum1l2S75PWomSxosdZykJuwaFvGvbOK1YqNpBJBEa-2F-T-2F-FJDm4K7G6kQV1hW22Jpokx-2F-K1Fa5CUa9galImA1F9HuMoEYJ43olqau3DKj-2F-pFdl88IXv25MwLAIMel4OZl9XKZyTWTy57lEJoeqdyipZZBOmjkiVbTSntUNzxt6RglrC91s6uKDlNrV8AO9TWNPNR06quuXurn8UTB7y5RIkD4EBlJ-2F-IaIbOizVrlOq10Xc3Lms9YtKSL5FKKv-2B-6F2-2B-DVGExM3XPSV8CPRbLDt5wOdPcf9an3w-2B-tJ7VSKh7OXjErRBd-2F-M2Idg99Bf34Mq03bEWzymHc2OHm1iGSO9WAjm8ZJcLQvZkorZ2StYpqBJvCDr7h7OGvT-2B-DvomoK-2F-jSMwHLFsRMgnbVApiBao6OOulNSB0cODzvDaDgHGOl549UIaTidzpYYBaIvDKo-2F-ac5PNNu35rMO8ZsBNuS0hyU-2B-eXbpDz3-2F--2B-y49dGujmrgLm4olJ4TA-3D--3D-"
+SigningHubAPI.add_package() completed successfully.
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+ * Detected change in '/opt/signinghub-api-flask-poc/example_app/local_settings.py', reloading
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+Point your browser to https://localhost:443
+Notice the 's' in 'https' and the 443 port instead of the usual 80
+ * Serving Flask app 'example_app.example_app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://172.16.221.253:80
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 845-662-329
+172.16.221.237 - - [03/Apr/2024 14:20:28] "GET /?token=cKov8rflw7xR_bf-syG0sYVmY8X7D8fvQ_rWCikHWL3bBkj3zrt_MKz6G0Ji-BQgaCWu-zNWd2rZSEWrS2c-Q9pjl2OJSB5t_jbzToOoSfSst07QEGdcVvBbzC7La3CSJkY4DnYdPYHbvFQB-dJXa1UIs_1TdDJ61f6-9PgCElxuQBsZWouSoBlu2NzHyYQZwEe1Vuz_FnfpOorkAGtAs4KercA5fxWlNCJruzcM0g9-SxInm2JgHgTMk3JIGxUQvJgylLsjpXSGj3ikNAfn87aDvdRK629ErKN37Mrm3mP3kEPdOvreoCdi2oaU7qfiAsIu1rQCWPR5Bt1kg3VfjU8-q5fN8XalzuxhgDfeaOP3fEKew8afs0qrqJy7dFIBe49ppPJAA1e2YtyrmF3jHhvXF0ZunGhRUVtsknw3fIRxF4Q1wGdZhLpbVSa5qDv8z39flpmgvjTmaWVtjz_2cE70Q8VN0Sc202psVJpYW16yg_Vw3zX2e3SlyAUfYdI0sIH6ag8pTgNdg0wPXnFn_2WwJ5XmDpQliZhJ76hwpbE HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:20:29] "GET /?token=cKov8rflw7xR_bf-syG0sYVmY8X7D8fvQ_rWCikHWL3bBkj3zrt_MKz6G0Ji-BQgaCWu-zNWd2rZSEWrS2c-Q9pjl2OJSB5t_jbzToOoSfSst07QEGdcVvBbzC7La3CSJkY4DnYdPYHbvFQB-dJXa1UIs_1TdDJ61f6-9PgCElxuQBsZWouSoBlu2NzHyYQZwEe1Vuz_FnfpOorkAGtAs4KercA5fxWlNCJruzcM0g9-SxInm2JgHgTMk3JIGxUQvJgylLsjpXSGj3ikNAfn87aDvdRK629ErKN37Mrm3mP3kEPdOvreoCdi2oaU7qfiAsIu1rQCWPR5Bt1kg3VfjU8-q5fN8XalzuxhgDfeaOP3fEKew8afs0qrqJy7dFIBe49ppPJAA1e2YtyrmF3jHhvXF0ZunGhRUVtsknw3fIRxF4Q1wGdZhLpbVSa5qDv8z39flpmgvjTmaWVtjz_2cE70Q8VN0Sc202psVJpYW16yg_Vw3zX2e3SlyAUfYdI0sIH6ag8pTgNdg0wPXnFn_2WwJ5XmDpQliZhJ76hwpbE HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:20:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+172.16.221.237 - - [03/Apr/2024 14:20:33] "[35m[1mGET /show_iframe_2?token=cKov8rflw7xR_bf-syG0sYVmY8X7D8fvQ_rWCikHWL3bBkj3zrt_MKz6G0Ji-BQgaCWu-zNWd2rZSEWrS2c-Q9pjl2OJSB5t_jbzToOoSfSst07QEGdcVvBbzC7La3CSJkY4DnYdPYHbvFQB-dJXa1UIs_1TdDJ61f6-9PgCElxuQBsZWouSoBlu2NzHyYQZwEe1Vuz_FnfpOorkAGtAs4KercA5fxWlNCJruzcM0g9-SxInm2JgHgTMk3JIGxUQvJgylLsjpXSGj3ikNAfn87aDvdRK629ErKN37Mrm3mP3kEPdOvreoCdi2oaU7qfiAsIu1rQCWPR5Bt1kg3VfjU8-q5fN8XalzuxhgDfeaOP3fEKew8afs0qrqJy7dFIBe49ppPJAA1e2YtyrmF3jHhvXF0ZunGhRUVtsknw3fIRxF4Q1wGdZhLpbVSa5qDv8z39flpmgvjTmaWVtjz_2cE70Q8VN0Sc202psVJpYW16yg_Vw3zX2e3SlyAUfYdI0sIH6ag8pTgNdg0wPXnFn_2WwJ5XmDpQliZhJ76hwpbE HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/opt/signinghub-api-flask-poc/example_app/example_app.py", line 169, in show_iframe_2
+    document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'),
+  File "/opt/signinghub-api-flask-poc/signinghub_api/signinghub_api.py", line 124, in upload_binary_document_to_library
+    response = requests.post(url, headers=headers, files=dict(file=file))
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/api.py", line 110, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/api.py", line 56, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/sessions.py", line 474, in request
+    prep = self.prepare_request(req)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/sessions.py", line 397, in prepare_request
+    p.prepare(
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/models.py", line 305, in prepare
+    self.prepare_body(data, files, json)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/models.py", line 483, in prepare_body
+    (body, content_type) = self._encode_files(files, data)
+  File "/root/.cache/pypoetry/virtualenvs/signinghub-api-6YQbwk1z-py3.8/lib/python3.8/site-packages/requests/models.py", line 158, in _encode_files
+    fdata = fp.read()
+AttributeError: 'NoneType' object has no attribute 'read'
+172.16.221.237 - - [03/Apr/2024 14:20:33] "GET /show_iframe_2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:20:33] "GET /show_iframe_2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:20:33] "GET /show_iframe_2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:20:33] "[36mGET /show_iframe_2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+172.16.221.237 - - [03/Apr/2024 14:20:44] "GET /ndc_billing_dynamic?token=cKov8rflw7xR_bf-syG0sYVmY8X7D8fvQ_rWCikHWL3bBkj3zrt_MKz6G0Ji-BQgaCWu-zNWd2rZSEWrS2c-Q9pjl2OJSB5t_jbzToOoSfSst07QEGdcVvBbzC7La3CSJkY4DnYdPYHbvFQB-dJXa1UIs_1TdDJ61f6-9PgCElxuQBsZWouSoBlu2NzHyYQZwEe1Vuz_FnfpOorkAGtAs4KercA5fxWlNCJruzcM0g9-SxInm2JgHgTMk3JIGxUQvJgylLsjpXSGj3ikNAfn87aDvdRK629ErKN37Mrm3mP3kEPdOvreoCdi2oaU7qfiAsIu1rQCWPR5Bt1kg3VfjU8-q5fN8XalzuxhgDfeaOP3fEKew8afs0qrqJy7dFIBe49ppPJAA1e2YtyrmF3jHhvXF0ZunGhRUVtsknw3fIRxF4Q1wGdZhLpbVSa5qDv8z39flpmgvjTmaWVtjz_2cE70Q8VN0Sc202psVJpYW16yg_Vw3zX2e3SlyAUfYdI0sIH6ag8pTgNdg0wPXnFn_2WwJ5XmDpQliZhJ76hwpbE HTTP/1.1" 200 -
+172.16.221.237 - - [03/Apr/2024 14:21:14] "POST /ndc_billing_dynamic?package_id=12370%20%20%20%20%20%20%20%20&access_token=cKov8rflw7xR_bf-syG0sYVmY8X7D8fvQ_rWCikHWL3bBkj3zrt_MKz6G0Ji-BQgaCWu-zNWd2rZSEWrS2c-Q9pjl2OJSB5t_jbzToOoSfSst07QEGdcVvBbzC7La3CSJkY4DnYdPYHbvFQB-dJXa1UIs_1TdDJ61f6-9PgCElxuQBsZWouSoBlu2NzHyYQZwEe1Vuz_FnfpOorkAGtAs4KercA5fxWlNCJruzcM0g9-SxInm2JgHgTMk3JIGxUQvJgylLsjpXSGj3ikNAfn87aDvdRK629ErKN37Mrm3mP3kEPdOvreoCdi2oaU7qfiAsIu1rQCWPR5Bt1kg3VfjU8-q5fN8XalzuxhgDfeaOP3fEKew8afs0qrqJy7dFIBe49ppPJAA1e2YtyrmF3jHhvXF0ZunGhRUVtsknw3fIRxF4Q1wGdZhLpbVSa5qDv8z39flpmgvjTmaWVtjz_2cE70Q8VN0Sc202psVJpYW16yg_Vw3zX2e3SlyAUfYdI0sIH6ag8pTgNdg0wPXnFn_2WwJ5XmDpQliZhJ76hwpbE%20%20%20%20%20%20%20%20&package_name=2024%20Contract%20-%20Torsho%20-%20torshobuet@gmail.com HTTP/1.1" 200 -
