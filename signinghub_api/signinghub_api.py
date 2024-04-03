@@ -7,7 +7,7 @@ from __future__ import print_function
 import requests
 import json
 
-LOCAL_DEBUG = True                      # Print local debug info or not
+LOCAL_DEBUG = True  # Print local debug info or not
 
 
 # The SigningHubAPI class offers access to the Adobe Sign REST API version 5
@@ -26,7 +26,6 @@ class SigningHubAPI(object):
         self.last_function_name = None
         self.last_error_message = None
         pass
-
 
     # Returns the access_token on success.
     # Returns '' otherwise.
@@ -60,8 +59,7 @@ class SigningHubAPI(object):
 
         return access_token
 
-
-    def add_package(self, access_token, package_name):
+    def add_package(self, access_token, package_name, workflow_mode='ME_AND_OTHERS', folder_name='INBOX'):
         self.last_function_name = 'SigningHubAPI.add_package'
         package_id = 0
         if access_token:
@@ -72,6 +70,8 @@ class SigningHubAPI(object):
             }
             payload = {
                 'package_name': package_name,
+                'workflow_mode': workflow_mode,
+                'folder_name': folder_name
             }
             url = self.base_url + 'packages'
             response = requests.post(url, headers=headers, json=payload)
@@ -85,7 +85,6 @@ class SigningHubAPI(object):
                 self._print_response_error('GET', url, headers, payload, response)
 
         return package_id
-
 
     def upload_document_from_library(self, access_token, package_id, library_document_id):
         self.last_function_name = 'SigningHubAPI.upload_document_from_library'
@@ -133,8 +132,6 @@ class SigningHubAPI(object):
 
         return document_id
 
-
-
     def rename_document(self, access_token, package_id, document_id, document_name):
         self.last_function_name = 'SigningHubAPI.rename_document'
         success = False
@@ -158,7 +155,6 @@ class SigningHubAPI(object):
                 self._print_response_error('PUT', url, headers, payload, response)
 
         return success
-
 
     def apply_workflow_template(self, access_token, package_id, document_id, template_name):
         self.last_function_name = 'SigningHubAPI.apply_workflow_template'
@@ -185,7 +181,6 @@ class SigningHubAPI(object):
 
         return success
 
-
     def delete_package(self, access_token, package_id):
         self.last_function_name = 'SigningHubAPI.delete_package'
         if access_token:
@@ -194,7 +189,7 @@ class SigningHubAPI(object):
                 'Accept': 'application/json',
                 'Authorization': 'Bearer ' + access_token,
             }
-            url = self.base_url + 'packages/'+str(package_id)
+            url = self.base_url + 'packages/' + str(package_id)
             response = requests.delete(url, headers=headers)
 
             # Process the response
@@ -202,7 +197,6 @@ class SigningHubAPI(object):
                 self._print_success()
             else:
                 self._print_response_error('DELETE', url, headers, None, response)
-
 
     # Get a list of library documents.
     # Returns a list of library document information records on success.
@@ -214,7 +208,7 @@ class SigningHubAPI(object):
         # Retrieve a list of library documents
         if access_token:
             headers = {
-                'Authorization': 'Bearer '+access_token,
+                'Authorization': 'Bearer ' + access_token,
                 'Accept': 'application/json',
                 'x-folder': folder,
                 # 'x-search-text': '',
@@ -234,7 +228,6 @@ class SigningHubAPI(object):
 
         return packages
 
-
     # Find a library document by document name.
     # Returns the library document ID on success.
     # Returns None otherwise.
@@ -248,8 +241,35 @@ class SigningHubAPI(object):
 
         return package_id
 
+    def add_placeholder(self, access_token, package_id):
+        self.last_function_name = 'SigningHubAPI.add_placehoder'
+        success = False
+        if access_token:
+            headers = {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + access_token,
+            }
+            payload = [
+                {
+                    'placeholder': "Customer Signature",
+                    'role': 'SIGNER',
+                    'email_notification': True,
+                }
+            ]
+            url = self.base_url + 'packages/' + str(package_id) + '/workflow/placeholder'
+            response = requests.post(url, headers=headers, json=payload)
 
-    def update_workflow_user(self, access_token, package_id, user_email, user_name):
+            # Process the response
+            if response.status_code in (200, 201):
+                success = True
+                self._print_success()
+            else:
+                self._print_response_error('POST', url, headers, payload, response)
+
+        return success
+
+    def update_workflow_user(self, access_token, package_id, user_email, user_name, order=1):
         self.last_function_name = 'SigningHubAPI.update_workflow_user'
         success = False
         if access_token:
@@ -264,7 +284,7 @@ class SigningHubAPI(object):
                 'role': 'SIGNER',
                 'email_notification': True,
             }
-            url = self.base_url + 'packages/' + str(package_id) + '/workflow/1/user'
+            url = self.base_url + 'packages/' + str(package_id) + f'/workflow/{order}/user'
             response = requests.put(url, headers=headers, json=payload)
 
             # Process the response
@@ -276,6 +296,42 @@ class SigningHubAPI(object):
 
         return success
 
+    def add_signature_field(self, access_token, package_id, document_id, user_email, user_name, order=1, page_no=8, x_coord=340):
+        self.last_function_name = 'SigningHubAPI.add_signature_field'
+        success = False
+        if access_token:
+            headers = {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': 'Bearer ' + access_token,
+            }
+            payload = {
+                "order": order,
+                "page_no": page_no,
+                "field_name": f"Signature-{order}",
+                "display": "visible",
+
+                "dimensions": {
+                    "x": x_coord,
+                    "y": 712.62,
+                    "width": 100,
+                    "height": 55
+                },
+                "level_of_assurance": [
+                    "QUALIFIED_ELECTRONIC_SIGNATURE"
+                ]
+            }
+            url = self.base_url + 'packages/' + str(package_id) + f'/documents/{document_id}'+ '/fields/signature'
+            response = requests.post(url, headers=headers, json=payload)
+
+            # Process the response
+            if response.status_code in (200, 201):
+                success = True
+                self._print_success()
+            else:
+                self._print_response_error('PUT', url, headers, payload, response)
+
+        return success
 
     def get_document_fields(self, access_token, package_id, document_id):
         self.last_function_name = 'SigningHubAPI.get_document_fields'
@@ -284,7 +340,7 @@ class SigningHubAPI(object):
         # Retrieve a list of documents fields
         if access_token:
             headers = {
-                'Authorization': 'Bearer '+access_token,
+                'Authorization': 'Bearer ' + access_token,
                 'Accept': 'application/json',
             }
 
@@ -302,7 +358,6 @@ class SigningHubAPI(object):
 
         return fields
 
-
     def update_textbox_field(self, access_token, package_id, document_id, fields, field_name, field_value):
         self.last_function_name = 'SigningHubAPI.update_textbox_field'
         success = False
@@ -311,7 +366,7 @@ class SigningHubAPI(object):
         if access_token:
             old_field = None
             for field in fields['text']:
-                if field['field_name']==field_name:
+                if field['field_name'] == field_name:
                     old_field = field
 
             # Use old field settings with new value
@@ -346,7 +401,6 @@ class SigningHubAPI(object):
 
         return success
 
-
     def share_document(self, access_token, package_id):
         self.last_function_name = 'SigningHubAPI.share_document'
         success = False
@@ -369,15 +423,13 @@ class SigningHubAPI(object):
 
         return success
 
-
     def _print_success(self):
         self.last_error_message = None
-        print(self.last_function_name+'() completed successfully.')
-
+        print(self.last_function_name + '() completed successfully.')
 
     def _print_response_error(self, method, url, headers, payload, response):
         self.last_error_message = response.json().get('Message', 'Unknown error')
-        print('ERROR: '+self.last_function_name+'() failed.')
+        print('ERROR: ' + self.last_function_name + '() failed.')
         print('error_message:', self.last_error_message)
 
         if LOCAL_DEBUG:
@@ -418,5 +470,3 @@ class SigningHubAPI(object):
         print(response.text)
 
         return response.text.strip()[1:-1]
-
-

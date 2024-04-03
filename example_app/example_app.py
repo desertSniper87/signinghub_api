@@ -25,6 +25,8 @@ recipient_user_name = app.config.get('RECIPIENT_USER_NAME')
 recipient_user_email = app.config.get('RECIPIENT_USER_EMAIL')
 # recipient_field_name = app.config.get('RECIPIENT_FIELD_NAME')
 recipient_field_value = app.config.get('RECIPIENT_FIELD_VALUE')
+admin_email = app.config.get('SIGNINGHUB_USERNAME')
+admin_username = app.config.get('ADMIN')
 
 # Display the home page
 @app.route('/')
@@ -144,6 +146,84 @@ def show_iframe():
                                package_id=package_id,
                                user_email=recipient_user_email)
 
+
+@app.route('/show_iframe_2')
+def show_iframe_2():
+    # Get access token from the URL query string
+    access_token = request.args.get('token')
+    if not access_token: return redirect('/')
+
+    # Create a package
+    package_name = '2024 Contract - '+recipient_user_name+' - '+recipient_user_email
+    package_id = signinghub_api.add_package(access_token, package_name)
+
+    # Add a document from the document library
+    success = True
+    if package_id:
+        document_id = signinghub_api.upload_document_from_library(access_token, package_id, signinghub_library_document_id)
+
+        # Rename document
+
+        if document_id:
+            success = signinghub_api.add_placeholder(access_token, package_id)
+
+        if success:
+            success = signinghub_api.update_workflow_user(
+                access_token, package_id, recipient_user_email, recipient_user_name, order=1
+            )
+
+        if success:
+            success = signinghub_api.update_workflow_user(
+                access_token, package_id, admin_email, admin_username, order=2
+            )
+
+        if success:
+            success = signinghub_api.add_signature_field(access_token,
+                                                         package_id,
+                                                         document_id,
+                                                         recipient_user_email,
+                                                         recipient_user_name,
+                                                         order=1,
+                                                         x_coord=340)
+
+        if success:
+            success = signinghub_api.add_signature_field(access_token,
+                                                         package_id,
+                                                         document_id,
+                                                         admin_email,
+                                                         admin_username,
+                                                         order=2,
+                                                         x_coord=230)
+
+        # Share Package
+        if success:
+            success = signinghub_api.share_document(access_token, package_id)
+
+        if success:
+            iframe_text = signinghub_api.get_iframe_url(access_token, package_id, recipient_user_email)
+
+    # Show error message if needed
+    if signinghub_api.last_error_message:
+        return render_template('show_error_message.html',
+                               access_token=access_token,
+                               last_function_name=signinghub_api.last_function_name,
+                               last_error_message=signinghub_api.last_error_message)
+
+    if iframe_text:
+        # Render the IFrame with the document for signing
+        return render_template('show_iframe.html',
+                               access_token=access_token,
+                               package_id=package_id,
+                               user_email=recipient_user_email,
+                               iframe_text=f"{iframe_text}")
+    else:
+        return render_template('show_iframe.html',
+                               access_token=access_token,
+                               package_id=package_id,
+                               user_email=recipient_user_email)
+
+
+
 @app.route('/ndc_billing', methods=['GET', 'POST'])
 def ndc_billing():
     if request.method == 'GET':
@@ -225,6 +305,90 @@ def ndc_billing():
                                package_id=package_id,
                                user_email=recipient_user_email,
                                iframe_text=f"{iframe_text}")
+
+
+@app.route('/ndc_billing_dynamic', methods=['GET', 'POST'])
+def ndc_billing_dynamic():
+    if request.method == 'GET':
+        access_token = request.args.get('token')
+        if not access_token:
+            return redirect('/')
+
+        # Create a package
+        package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
+        package_id = signinghub_api.add_package(access_token, package_name)
+
+
+
+        # Show error message if needed
+        if signinghub_api.last_error_message:
+            return render_template('show_error_message.html',
+                                   access_token=access_token,
+                                   last_function_name=signinghub_api.last_function_name,
+                                   last_error_message=signinghub_api.last_error_message)
+
+        # Render the home page
+        return render_template('ndc_billing_dynamic.html',
+                               access_token=access_token,
+                               package_id=package_id,
+                               package_name=package_name)
+
+    elif request.method == 'POST':
+        # Add a document from the document library
+        package_id = request.args.get('package_id').strip()
+        access_token = request.args.get('access_token').strip()
+        package_name = request.args.get('package_name').strip()
+
+        iframe_text = None
+
+        if package_id:
+            document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'), package_id)
+
+        # Rename document
+        if document_id:
+            document_name = package_name
+            success = signinghub_api.rename_document(access_token, package_id, document_id, document_name)
+
+            # Add a template
+            if success:
+                template_name = signinghub_template_name
+                success = signinghub_api.apply_workflow_template(access_token, package_id, document_id, template_name)
+
+            # print fields, so that we can determine the name of the text field
+            if success:
+                fields = signinghub_api.get_document_fields(access_token, package_id, document_id)
+                print('Fields:', json.dumps(fields, indent=4))
+
+                # Pre-fill the text field
+                # success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
+                #                                               fields, recipient_field_name, recipient_field_value)
+
+            # Add signer
+            if success:
+                success = signinghub_api.update_workflow_user(access_token, package_id, recipient_user_email,
+                                                              recipient_user_name)
+
+            # Share Package
+            if success:
+                success = signinghub_api.share_document(access_token, package_id)
+
+            if success:
+                iframe_text = signinghub_api.get_iframe_url(access_token, package_id, recipient_user_email)
+
+        # Show error message if needed
+        if signinghub_api.last_error_message:
+            return render_template('show_error_message.html',
+                                   access_token=access_token,
+                                   last_function_name=signinghub_api.last_function_name,
+                                   last_error_message=signinghub_api.last_error_message)
+
+        # Render the IFrame with the document for signing
+        return render_template('show_iframe.html',
+                               access_token=access_token,
+                               package_id=package_id,
+                               user_email=recipient_user_email,
+                               iframe_text=f"{iframe_text}")
+
 
 
 # SigningHub Callback, called after a user finishes the IFrame

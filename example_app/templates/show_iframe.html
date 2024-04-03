@@ -7,7 +7,7 @@
 {#<iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px"#}
 {#    src="https://staging-sh.bcc-ca.gov.bd:91/Integration?access_token={{ access_token }}&document_id={{package_id }}&language=en-us&user_email={{ user_email }}"&/>#}
 
-    <iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px" src={{ iframe_text }}& ></iframe>
+{#    <iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px" src={{ iframe_text }}& ></iframe>#}
 
 <br/>
 <p><a href="/?token={{ access_token }}">Return Home</a></p>
@@ -15,6 +15,6 @@
 
 {% block js %}
     <script>
-          {#const popupWindow = window.open("{{iframe_text}}", "_newTab", "width=800,height=600");#}
+          const popupWindow = window.open("{{iframe_text}}", "_newTab", "width=800,height=600");
     </script>
 {% endblock %}
