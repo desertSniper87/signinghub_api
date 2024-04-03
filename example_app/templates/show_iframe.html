@@ -9,6 +9,12 @@
 
 {#    <iframe id="id_sh_iframe" name="sh_iframe" width="100%" height="800px" src={{ iframe_text }}& ></iframe>#}
 
+    <h2>Iframe Urls:</h2>
+
+    <a href="{{ iframe_text }}" target="_blank">User</a> <br>
+    <a href="{{ iframe_text2 }}" target="_blank">Admin</a>
+
+
 <br/>
 <p><a href="/?token={{ access_token }}">Return Home</a></p>
 {% endblock %}
@@ -16,5 +22,8 @@
 {% block js %}
     <script>
           const popupWindow = window.open("{{iframe_text}}", "_newTab", "width=800,height=600");
+{#          {% if admin_email %}#}
+{#            const popupWindow2 = window.open("{{iframe_text2}}", "_newTab2", "width=800,height=600");#}
+{#          {% endif %}#}
     </script>
 {% endblock %}

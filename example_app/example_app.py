@@ -7,16 +7,16 @@ app = Flask(__name__)
 
 # Copy local_settings.py from local_settings_example.py
 # Edit local_settings.py to reflect your CLIENT_ID and CLIENT_SECRET
-app.config.from_pyfile('local_settings.py')    # Read example_app.local_settings.py
+app.config.from_pyfile('local_settings.py')  # Read example_app.local_settings.py
 
 # Initialize the SigningHub API wrapper
 signinghub_api = SigningHubAPI(
-        app.config.get('SIGNINGHUB_CLIENT_ID'),
-        app.config.get('SIGNINGHUB_CLIENT_SECRET'),
-        app.config.get('SIGNINGHUB_USERNAME'),
-        app.config.get('SIGNINGHUB_PASSWORD'),
-        app.config.get('SIGNINGHUB_SCOPE')
-        )
+    app.config.get('SIGNINGHUB_CLIENT_ID'),
+    app.config.get('SIGNINGHUB_CLIENT_SECRET'),
+    app.config.get('SIGNINGHUB_USERNAME'),
+    app.config.get('SIGNINGHUB_PASSWORD'),
+    app.config.get('SIGNINGHUB_SCOPE')
+)
 
 # Retrieve config settings from local_settings.py
 signinghub_library_document_id = app.config.get('SIGNINGHUB_LIBRARY_DOCUMENT_ID')
@@ -28,6 +28,7 @@ recipient_field_value = app.config.get('RECIPIENT_FIELD_VALUE')
 admin_email = app.config.get('SIGNINGHUB_USERNAME')
 admin_username = app.config.get('ADMIN')
 
+
 # Display the home page
 @app.route('/')
 def home_page():
@@ -35,7 +36,7 @@ def home_page():
 
     # Render the home page
     return render_template('home.html',
-            access_token=access_token)
+                           access_token=access_token)
 
 
 @app.route('/new_token')
@@ -49,7 +50,7 @@ def new_token():
                                last_function_name=signinghub_api.last_function_name,
                                last_error_message=signinghub_api.last_error_message)
     # Redirect to home page
-    return redirect(url_for('home_page')+'?token='+access_token)
+    return redirect(url_for('home_page') + '?token=' + access_token)
 
 
 # Retrieve and render a list of Adobe Sign Library Documents
@@ -89,12 +90,13 @@ def show_iframe():
     if not access_token: return redirect('/')
 
     # Create a package
-    package_name = '2024 Contract - '+recipient_user_name+' - '+recipient_user_email
+    package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
     package_id = signinghub_api.add_package(access_token, package_name)
 
     # Add a document from the document library
     if package_id:
-        document_id = signinghub_api.upload_document_from_library(access_token, package_id, signinghub_library_document_id)
+        document_id = signinghub_api.upload_document_from_library(access_token, package_id,
+                                                                  signinghub_library_document_id)
 
         # Rename document
         if document_id:
@@ -117,7 +119,8 @@ def show_iframe():
 
             # Add signer
             if success:
-                success = signinghub_api.update_workflow_user(access_token, package_id, recipient_user_email, recipient_user_name)
+                success = signinghub_api.update_workflow_user(access_token, package_id, recipient_user_email,
+                                                              recipient_user_name)
 
             # Share Package
             if success:
@@ -154,13 +157,14 @@ def show_iframe_2():
     if not access_token: return redirect('/')
 
     # Create a package
-    package_name = '2024 Contract - '+recipient_user_name+' - '+recipient_user_email
+    package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
     package_id = signinghub_api.add_package(access_token, package_name)
 
     # Add a document from the document library
     success = True
     if package_id:
-        document_id = signinghub_api.upload_document_from_library(access_token, package_id, signinghub_library_document_id)
+        document_id = signinghub_api.upload_document_from_library(access_token, package_id,
+                                                                  signinghub_library_document_id)
 
         # Rename document
 
@@ -223,7 +227,6 @@ def show_iframe_2():
                                user_email=recipient_user_email)
 
 
-
 @app.route('/ndc_billing', methods=['GET', 'POST'])
 def ndc_billing():
     if request.method == 'GET':
@@ -234,8 +237,6 @@ def ndc_billing():
         # Create a package
         package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
         package_id = signinghub_api.add_package(access_token, package_name)
-
-
 
         # Show error message if needed
         if signinghub_api.last_error_message:
@@ -259,7 +260,8 @@ def ndc_billing():
         iframe_text = None
 
         if package_id:
-            document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'), package_id)
+            document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'),
+                                                                           package_id)
 
         # Rename document
         if document_id:
@@ -318,8 +320,6 @@ def ndc_billing_dynamic():
         package_name = '2024 Contract - ' + recipient_user_name + ' - ' + recipient_user_email
         package_id = signinghub_api.add_package(access_token, package_name)
 
-
-
         # Show error message if needed
         if signinghub_api.last_error_message:
             return render_template('show_error_message.html',
@@ -339,34 +339,61 @@ def ndc_billing_dynamic():
         access_token = request.args.get('access_token').strip()
         package_name = request.args.get('package_name').strip()
 
+        recipient_user_email_ = request.form.get('username').strip()
+        admin_email = request.form.get('admin_username').strip()
+        admin_password = request.form.get('admin_password').strip()
+        client_id = request.form.get('client_id').strip()
+        client_secret = request.form.get('client_secret').strip()
+
+        signinghub_api_ = SigningHubAPI(client_id=client_id,
+                                        client_secret=client_secret,
+                                        username=admin_email,
+                                        password=admin_password,
+                                        scope=admin_email)
+
+        access_token = signinghub_api_.get_access_token()
+
         iframe_text = None
+        iframe_text2 = None
+        document_id = None
+        success = True
 
         if package_id:
-            document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'), package_id)
+            document_id = signinghub_api.upload_document_from_library(access_token, package_id,
+                                                                      signinghub_library_document_id)
 
-        # Rename document
-        if document_id:
-            document_name = package_name
-            success = signinghub_api.rename_document(access_token, package_id, document_id, document_name)
+            # Rename document
 
-            # Add a template
+            if document_id:
+                success = signinghub_api.add_placeholder(access_token, package_id)
+
             if success:
-                template_name = signinghub_template_name
-                success = signinghub_api.apply_workflow_template(access_token, package_id, document_id, template_name)
+                success = signinghub_api.update_workflow_user(
+                    access_token, package_id, recipient_user_email_, "CUSTOMER", order=1
+                )
 
-            # print fields, so that we can determine the name of the text field
             if success:
-                fields = signinghub_api.get_document_fields(access_token, package_id, document_id)
-                print('Fields:', json.dumps(fields, indent=4))
+                success = signinghub_api.update_workflow_user(
+                    access_token, package_id, admin_email, "ADMIN", order=2
+                )
 
-                # Pre-fill the text field
-                # success = signinghub_api.update_textbox_field(access_token, package_id, document_id,
-                #                                               fields, recipient_field_name, recipient_field_value)
-
-            # Add signer
             if success:
-                success = signinghub_api.update_workflow_user(access_token, package_id, recipient_user_email,
-                                                              recipient_user_name)
+                success = signinghub_api.add_signature_field(access_token,
+                                                             package_id,
+                                                             document_id,
+                                                             recipient_user_email,
+                                                             recipient_user_name,
+                                                             order=1,
+                                                             x_coord=340)
+
+            if success:
+                success = signinghub_api.add_signature_field(access_token,
+                                                             package_id,
+                                                             document_id,
+                                                             admin_email,
+                                                             admin_username,
+                                                             order=2,
+                                                             x_coord=230)
 
             # Share Package
             if success:
@@ -374,6 +401,7 @@ def ndc_billing_dynamic():
 
             if success:
                 iframe_text = signinghub_api.get_iframe_url(access_token, package_id, recipient_user_email)
+                iframe_text2 = signinghub_api.get_iframe_url(access_token, package_id, admin_email)
 
         # Show error message if needed
         if signinghub_api.last_error_message:
@@ -387,16 +415,17 @@ def ndc_billing_dynamic():
                                access_token=access_token,
                                package_id=package_id,
                                user_email=recipient_user_email,
-                               iframe_text=f"{iframe_text}")
-
+                               admin_email=admin_email,
+                               iframe_text=f"{iframe_text}",
+                               iframe_text2=f"{iframe_text2}")
 
 
 # SigningHub Callback, called after a user finishes the IFrame
-@app.route('/signinghub/callback')    # Must match SigningHub's Application call-back URL setting
+@app.route('/signinghub/callback')  # Must match SigningHub's Application call-back URL setting
 def signinghub_callback():
     # Retrieve callback info from the query parameters
     access_token = request.args.get('token')
-    package_id = request.args.get('document_id')    # legacy parameter name. It really points to the Package.
+    package_id = request.args.get('document_id')  # legacy parameter name. It really points to the Package.
     language_code = request.args.get('language')
     user_email = request.args.get('user_email')
 
@@ -406,4 +435,3 @@ def signinghub_callback():
                            package_id=package_id,
                            language_code=language_code,
                            user_email=user_email)
-

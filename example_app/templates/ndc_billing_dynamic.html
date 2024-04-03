@@ -4,15 +4,30 @@
     <h2><a href="/?token={{ access_token }}">SigningHub Example</a> - Sign Agreement</h2>
 
     {% if not file %}
-        <form method="post" enctype="multipart/form-data" action="/ndc_billing?package_id={{ package_id }}
+        <form method="post" enctype="multipart/form-data" action="/ndc_billing_dynamic?package_id={{ package_id }}
         &access_token={{ access_token }}
         &package_name={{ package_name }}">
+            <div>
+                <label for="username">First Recepient Username:</label>
+                <input type="text" id="username" name="username" value="torshobuet@gmail.com">
+            </div>
+            <div>
+                <label for="admin_username">Admin Username:</label>
+                <input type="text" id="admin_username" name="admin_username" value="torshobuet.owner@gmail.com">
+            </div>
+            <div>
+                <label for="admin_password">Admin Password:</label>
+                <input type="text" id="admin_password" name="admin_password" value="123456">
+            </div>
+            <div>
+                <label for="client_id">Client ID:</label>
+                <input type="text" id="client_id" name="client_id" value="default-enterprise-client">
+            </div>
+            <div>
+                <label for="client_secret">Client Secret:</label>
+                <input type="text" id="client_secret" name="client_secret" value="9AA66CA38D5F20531D2D572EBB65C0DDA55C66CAF878E2FC9AF985D34FBDFF3E">
+            </div>
 
-{#            <label for="username">Username:</label>#}
-{#            <input type="text" id="username" name="username">#}
-{##}
-{#            <label for="username">Username:</label>#}
-{#            <input type="text" id="username" name="username">#}
 
             <input type="file" name="file">
             <button type="submit">Submit</button>
