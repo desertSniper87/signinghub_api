@@ -166,9 +166,6 @@ def show_iframe_2():
         #document_id = signinghub_api.upload_document_from_library(access_token, package_id,
         #                                                         signinghub_library_document_id)
         
-        document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'),
-                                                                               package_id)
-        
 
         # Rename document
 
@@ -363,10 +360,8 @@ def ndc_billing_dynamic():
         success = True
 
         if package_id:
-            # document_id = signinghub_api.upload_document_from_library(access_token, package_id,
-                                                                      # signinghub_library_document_id)
-            document_id = signinghub_api.upload_binary_document_to_library(access_token, request.files.get('file'),
-                                                                               package_id)
+            document_id = signinghub_api.upload_document_from_library(access_token, package_id,
+                                                                      signinghub_library_document_id)
 
             # Rename document
 

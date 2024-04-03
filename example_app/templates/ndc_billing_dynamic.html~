@@ -17,7 +17,7 @@
             </div>
             <div>
                 <label for="admin_password">Admin Password:</label>
-                <input type="text" id="admin_password" name="admin_password" value="">
+                <input type="text" id="admin_password" name="admin_password" value="123456">
             </div>
             <div>
                 <label for="client_id">Client ID:</label>
